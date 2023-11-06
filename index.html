@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div data-scroll data-scroll-speed="-5" id="page1">
+        <nav>
+          <img
+            src="./R-removebg-preview__1_-removebg-preview.png"
+            alt=""
+            width="40"
+            height="50"
+          />
+          <div id="right-nav">
+            <button id="listenButton">APP DESCRIPTION</button>
+            <button><i class="ri-menu-fill"></i></button>
+          </div>
+        </nav>
+        <div class="bottom-page1">
+          <h1>
+            Experience Real <br />
+            Estate Agility
+          </h1>
+          <div class="bottom-page1-inner">
+            <h4>
+              Create a digital twin of your existing building <br />
+              and release the potential of Web3.
+            </h4>
+            <button>LEARN MORE</button>
+          </div>
+        </div>
+        <video src="FIRST HOSPITAL.mp4" autoplay loop muted></video>
+      </div>
+      <div id="page2">
+        <h2>HOSPITAL - HELPING HAND</h2>
+        <h1>
+          "Helping Hand" hospital app is a user-friendly tool that lets users
+          easily search for hospitals in the app's database. It's designed to
+          help users quickly find hospitals by applying specific filters like
+          name, specialty, and location. This dynamic search bar is a key
+          feature that ensures users can access the right hospital information
+          quickly and efficiently.
+        </h1>
+      </div>
+      <style>
+        #table-container {
+          max-height: 90px;
+          overflow-y: scroll;
+          color: white;
+          padding: 1rem 3rem 1rem 3rem;
+          border-radius: 5rem;
+          border: 5px solid #5978f3;
+          font-size: 1.2rem;
+          line-height: 1em;
+          letter-spacing: 0.075em;
+          transition: background 0.3s;
+          cursor: pointer;
+          background: #0f1c53;
+          display: none; /* Initially hide the table container */
+        }
+      </style>
+      <div id="searchBarContainer">
+        <input type="text" id="searchBar" placeholder="Search Hospitals..." />
+        <button id="searchButton" alt="SEARCH HOSPITAL">
+          <i>S</i>
+          <i>E</i>
+          <i>A</i>
+          <i>R</i>
+          <i>C</i>
+          <i>H</i>
+          <i>&nbsp;</i>
+          <i>H</i>
+          <i>O</i>
+          <i>S</i>
+          <i>P</i>
+          <i>I</i>
+          <i>T</i>
+          <i>A</i>
+          <i>L</i>
+        </button>
+      </div>
+
+      <style>
+        #searchBarContainer {
+          text-align: center;
+          padding: 20px;
+        }
+
+        #searchButton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px; /* Adjust the height as needed */
+          position: relative;
+          padding: 0 20px;
+          font-size: 18px;
+          text-transform: uppercase;
+          border: 0;
+          box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+          background-color: hsl(210deg 100% 44%);
+          border-radius: 12px;
+          overflow: hidden;
+          transition: 31ms cubic-bezier(0.5, 0.7, 0.4, 1);
+        }
+
+        #searchButton:before {
+          content: attr(alt);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          inset: 0;
+          font-size: 15px;
+          font-weight: bold;
+          color: white;
+          letter-spacing: 4px;
+          opacity: 1;
+        }
+
+        #searchButton:active {
+          box-shadow: none;
+          transform: translateY(7px);
+          transition: 35ms cubic-bezier(0.5, 0.7, 0.4, 1);
+        }
+
+        #searchButton:hover:before {
+          transition: all 0s;
+          transform: translateY(100%);
+          opacity: 0;
+        }
+
+        #searchButton i {
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 4px;
+          font-style: normal;
+          transition: all 2s ease;
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+
+        #searchButton:hover i {
+          transition: all 0.2s ease;
+          transform: translateY(0px);
+          opacity: 1;
+        }
+
+        #searchButton:hover i:nth-child(1) {
+          transition-delay: 0.045s;
+        }
+
+        #searchButton:hover i:nth-child(2) {
+          transition-delay: calc(0.045s * 3);
+        }
+
+        #searchButton:hover i:nth-child(3) {
+          transition-delay: calc(0.045s * 4);
+        }
+
+        #searchButton:hover i:nth-child(4) {
+          transition-delay: calc(0.045s * 5);
+        }
+
+        #searchButton:hover i:nth-child(6) {
+          transition-delay: calc(0.045s * 6);
+        }
+
+        #searchButton:hover i:nth-child(7) {
+          transition-delay: calc(0.045s * 7);
+        }
+
+        #searchButton:hover i:nth-child(8) {
+          transition-delay: calc(0.045s * 8);
+        }
+
+        #searchButton:hover i:nth-child(9) {
+          transition-delay: calc(0.045s * 9);
+        }
+
+        #searchButton:hover i:nth-child(10) {
+          transition-delay: calc(0.045s * 10);
+        }
+
+        #searchButton:hover i:nth-child(11) {
+          transition-delay: calc(0.045s * 11);
+        }
+
+        #searchButton:hover i:nth-child(12) {
+          transition-delay: calc(0.045s * 12);
+        }
+
+        #searchButton:hover i:nth-child(13) {
+          transition-delay: calc(0.045s * 13);
+        }
+
+        #searchButton:hover i:nth-child(14) {
+          transition-delay: calc(0.045s * 14);
+        }
+
+        #searchButton:hover i:nth-child(15) {
+          transition-delay: calc(0.045s * 15);
+        }
+
+        #searchBar {
+          font-size: 20px;
+  height: 40px;
+  width: 11cm; /* Set the width to 11 centimeters */
+  background: rgb(51, 9, 205);
+  color: rgb(250, 63, 11);
+  border-radius: 5px;
+  box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke, 0 0 100px white;
+        }
+      </style>
+
+      <div id="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Sno</th>
+              <th>Hospital Name</th>
+              <th>Speciality</th>
+              <th>Address</th>
+              <th>Phone Number</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Table rows will be added here using JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <script>
+        const data = [ {
+        sno: 1,
+        hospitalName: "Baba Advanced Orthopaedic Hospital",
+        speciality: null,
+        address: "57, Maikrupa Society, Mental Hospital Road Karelibaug, Vadodara - 390018",
+        phoneNumber: "0265 246 0320, 0265 249 5692, 9825056644, 9173626152",
+    },
+    {
+        sno: 2,
+        hospitalName: "Baroda Heart Institute and Research Centre",
+        speciality: null,
+        address: "44, Main Road, Old Padra Road Haribhakti Colony, Vadodara - 390012",
+        phoneNumber: "0265 232 5444, 232 2021, 9825026760, 9979980078",
+    },
+    {
+        sno: 3,
+        hospitalName: "Sterling Hospital",
+        speciality: null,
+        address: "Sterling Addlife India Pvt. Ltd., Race Course Road, Opposite INOX Cinema, Vadodara - 390007",
+        phoneNumber: "0265 2354455, 235 4466, 235 4488, 7623014379, 9724535330",
+    },
+    {
+        sno: 4,
+        hospitalName: "Mahavir Hospital",
+        speciality: null,
+        address: "Waghodia Road, Beside Radhe Govind Apartment, Near Kaladarshan Cross Road, Vadodara - 390025",
+        phoneNumber: "0265 252 1133, 252 1155, 9824015584, 9824031914",
+    },
+    {
+        sno: 5,
+        hospitalName: "Bhailal Amin General Hospital",
+        speciality: null,
+        address: "Bhailal Amin Marg Main Road Gorwa, Vadodara - 390016",
+        phoneNumber: "0265 228 5555, 395 6222, 228 6666, 9825874358",
+    },
+    {
+        sno: 6,
+        hospitalName: "Vadodara Institute Of Neurological Sciences",
+        speciality: null,
+        address: "99, Urmi Society, Productivity Road, Opposite ESIC Hospital, Opposite Haveli Akota, Vadodara - 390020",
+        phoneNumber: "0265 233 1343, 234 1787, 9978999940",
+    },
+    {
+        sno: 7,
+        hospitalName: "Dwarkesh Hospital",
+        speciality: null,
+        address: "10/11, Shivali Society, VIP Road, Near L and T Circle Karelibaug, Vadodara - 390018",
+        phoneNumber: "0265 246 4999, 248 5376, 9825403344",
+    },
+    {
+        sno: 8,
+        hospitalName: "Chandan Hospital",
+        speciality: null,
+        address: "Old Navrang Talkies Compound, Opposite Hotel Utsav Raopura, Vadodara - 390001",
+        phoneNumber: "0265 243 0253, 243 0254, 9898522888",
+    },
+    {
+        sno: 9,
+        hospitalName: "Sunshine Global Hospital",
+        speciality: null,
+        address: "Near Nalini House, Near Shreyas Vidhyalaya, Behind ICICI Bank Manjalpur, Vadodara - 390011",
+        phoneNumber: "0265 330 0400, 393 8200, 393 8333",
+    },
+    {
+        sno: 10,
+        hospitalName: "Metro Hospital and Research Institute",
+        speciality: null,
+        address: "Harni Savli Road, Near Kendriya Vidyalay Harni, Vadodara - 390022",
+        phoneNumber: "0265 249 1414, 249 2525, 9601277012",
+    },
+    {
+        sno: 11,
+        hospitalName: "Uro Care Hospital",
+        speciality: null,
+        address: "Sainath Marg, Old Padra Road, Near Utkarsh Balvadi & Vrajwadi Appartment, Behind Vaccine Institute Gadapur Road, Vadodara - 390012",
+        phoneNumber: "0265 235 3049, 0265 232 5903, 9714146843, 9662051565",
+    },
+    {
+        sno: 12,
+        hospitalName: "Welcare Hospital",
+        speciality: null,
+        address: "Atladara - Vadsar Ring Road, Near Miles Motors Atladara, Vadodara - 390012",
+        phoneNumber: "0265 233 7172, 235 3670, 9327469784",
+    },
+    {
+        sno: 13,
+        hospitalName: "BAPS Shastriji Maharaj Hospital",
+        speciality: null,
+        address: "Shastri Yagnapurushdas Marg Main Road, Behind Atladra Temple, Near Atladara Railway Station Atladara, Vadodara - 390012",
+        phoneNumber: "0265 268 0313, 268 1420, 268 1144, 9998044983, 9558804880",
+    },
+    {
+        sno: 14,
+        hospitalName: "Dr Bharat S Modi",
+        speciality: null,
+        address: "101/103, Akashganga Complex, Race Course Road, Above Pizza Hut Race Course Circle, Vadodara - 390007",
+        phoneNumber: "0265 233 7172, 9558814733, 9327435566",
+    },
+    {
+        sno: 15,
+        hospitalName: "Spandan Multispeciality Hospital",
+        speciality: null,
+        address: "101 - 104, Shiv Siddhi Complex, Jetalpur Road Alkapuri, Vadodara - 390007",
+        phoneNumber: "0265 235 4658, 653 7959, 9825011001",
+    },
+    {
+        sno: 16,
+        hospitalName: "Zydus Hospitals & Healthcare Research Pvt Ltd",
+        speciality: null,
+        address: "Survey No 367/1, Near Sola Bridge S G Highway, Thaltej, Ahmedabad - 380054",
+        phoneNumber: "079 6619 0202, 6619 0333",
+    },
+    {
+        sno: 17,
+        hospitalName: "Sal Hospital",
+        speciality: null,
+        address: "Opposite Doordarshan Tower Drive-In Road, Ahmedabad - 380054",
+        phoneNumber: "079 2626 5704, 2626 5705, 7574915300",
+    },
+    {
+        sno: 18,
+        hospitalName: "Sanjivani Super Speciality Hospitals",
+        speciality: null,
+        address: "Paldi, Ahmedabad - 380007",
+        phoneNumber: "079 2676 0781, 2676 0782",
+    },
+    {
+        sno: 19,
+        hospitalName: "Apollo Hospitals",
+        speciality: null,
+        address: "Plot No 1A, Gandhinagar Bypass Sola Road, Ahmedabad - 380054",
+        phoneNumber: "079 6670 0200",
+    },
+    {
+        sno: 20,
+        hospitalName: "Shalby Hospitals",
+        speciality: null,
+        address: "S G Road, Sola, Ahmedabad - 380061",
+        phoneNumber: "079 4020 0000, 9429609311, 9099094041",
+    },
+    {
+    sno: 21,
+    hospitalName: "CIMS Hospital",
+    speciality: null,
+    address: "Near Shukan Mall, Science City Road Sola, Ahmedabad - 380060",
+    phoneNumber: "079 2771 5444, 9825200665",
+},
+{
+    sno: 22,
+    hospitalName: "Narayana Multispeciality Hospital",
+    speciality: null,
+    address: "Rakhiyal, Ahmedabad - 380023",
+    phoneNumber: "079 7172 6500, 7172 6600, 7172 6700",
+},
+{
+    sno: 23,
+    hospitalName: "Sterling Hospitals",
+    speciality: null,
+    address: "6th Floor, Sterling Cancer Hospital, Gurukul, Ahmedabad - 380052",
+    phoneNumber: "079 2771 1000, 2771 1024, 9824046034",
+},
+{
+    sno: 24,
+    hospitalName: "Nidhi Hospital",
+    speciality: null,
+    address: "8 - B, Nidhi Complex, Parimal Crossing, Ellis Bridge, Ahmedabad - 380006",
+    phoneNumber: "079 2644 5373, 2646 1864, 9825907097",
+},
+{
+    sno: 25,
+    hospitalName: "Sal Hospital",
+    speciality: null,
+    address: "Near Iskcon Temple, S G Road, Ahmedabad - 380059",
+    phoneNumber: "079 2625 5099, 9724187407",
+},
+{
+    sno: 26,
+    hospitalName: "Civil Hospital",
+    speciality: null,
+    address: "Asarwa, Ahmedabad - 380016",
+    phoneNumber: "079 2268 0744, 2268 0152",
+},
+{
+    sno: 27,
+    hospitalName: "GCS Medical College, Hospital, and Research Centre",
+    speciality: null,
+    address: "NH - 8, Ahmedabad - 380055",
+    phoneNumber: "079 2928 3112, 2928 3116, 2928 3118",
+},
+{
+    sno: 28,
+    hospitalName: "Apex Heart Institute",
+    speciality: null,
+    address: "Near Shukan Mall, Science City Road Sola, Ahmedabad - 380060",
+    phoneNumber: "079 7172 6500, 7172 6600, 7172 6700",
+},
+{
+    sno: 29,
+    hospitalName: "Ahmedabad Kidney Hospital",
+    speciality: null,
+    address: "132ft Ring Road, Near Helmet Circle, Memnagar, Ahmedabad - 380052",
+    phoneNumber: "079 2741 3524, 2741 3525, 9824010057",
+},
+{
+    sno: 30,
+    hospitalName: "Narayana Multispeciality Hospital",
+    speciality: null,
+    address: "Rakhiyal, Ahmedabad - 380023",
+    phoneNumber: "079 7172 6500, 7172 6600, 7172 6700",
+},
+// Continue adding more hospital entries as needed
+{
+    sno: 31,
+    hospitalName: "Sterling Hospitals",
+    speciality: null,
+    address: "6th Floor, Sterling Cancer Hospital, Gurukul, Ahmedabad - 380052",
+    phoneNumber: "079 2771 1000, 2771 1024, 9824046034",
+},
+{
+    sno: 32,
+    hospitalName: "Nidhi Hospital",
+    speciality: null,
+    address: "8 - B, Nidhi Complex, Parimal Crossing, Ellis Bridge, Ahmedabad - 380006",
+    phoneNumber: "079 2644 5373, 2646 1864, 9825907097",
+},
+{
+    sno: 33,
+    hospitalName: "Sal Hospital",
+    speciality: null,
+    address: "Near Iskcon Temple, S G Road, Ahmedabad - 380059",
+    phoneNumber: "079 2625 5099, 9724187407",
+},
+{
+    sno: 34,
+    hospitalName: "Civil Hospital",
+    speciality: null,
+    address: "Asarwa, Ahmedabad - 380016",
+    phoneNumber: "079 2268 0744, 2268 0152",
+},
+{
+    sno: 35,
+    hospitalName: "GCS Medical College, Hospital, and Research Centre",
+    speciality: null,
+    address: "NH - 8, Ahmedabad - 380055",
+    phoneNumber: "079 2928 3112, 2928 3116, 2928 3118",
+},
+{
+    sno: 36,
+    hospitalName: "Apex Heart Institute",
+    speciality: null,
+    address: "Near Shukan Mall, Science City Road Sola, Ahmedabad - 380060",
+    phoneNumber: "079 7172 6500, 7172 6600, 7172 6700",
+},
+{
+    sno: 37,
+    hospitalName: "Ahmedabad Kidney Hospital",
+    speciality: null,
+    address: "132ft Ring Road, Near Helmet Circle, Memnagar, Ahmedabad - 380052",
+    phoneNumber: "079 2741 3524, 2741 3525, 9824010057",
+},
+{
+    sno: 38,
+    hospitalName: "Aster Aadhar Hospital",
+    speciality: null,
+    address: "S G Highway, Bhat, Ahmedabad - 382428",
+    phoneNumber: "079 7633 3444, 7633 3555",
+},
+{
+    sno: 39,
+    hospitalName: "Astron Hospital and Healthcare Pvt Ltd",
+    speciality: null,
+    address: "4th Floor, Maruti Titanium, S G Highway, Ahmedabad - 380015",
+    phoneNumber: "079 2970 0112, 2970 0113, 2970 0114",
+},
+{
+    sno: 40,
+    hospitalName: "Bodyline Hospital",
+    speciality: null,
+    address: "Opposite Pragati Nagar, Nigam Road Naranpura, Ahmedabad - 380013",
+    phoneNumber: "079 4900 0707, 4900 0709",
+},
+// Continue adding more hospital entries as needed
+{
+    sno: 41,
+    hospitalName: "Apollo Hospitals",
+    speciality: null,
+    address: "Plot # 1 A, Bhat GIDC Estate, Gandhinagar - 382428",
+    phoneNumber: "079 6674 4700, 6674 4701, 7600011344",
+},
+{
+    sno: 42,
+    hospitalName: "Fortis Hospitals",
+    speciality: null,
+    address: "Survey No 211, Near Maitri Vatika, Panchamahal Chokdi, Harni Road, Vadodara - 390022",
+    phoneNumber: "0265 251 6300, 0265 251 6301, 7573099500",
+},
+{
+    sno: 43,
+    hospitalName: "Narayana Multispeciality Hospital",
+    speciality: null,
+    address: "Near Sardar Patel Statue, Vadtal - Koyli Road, Nadiad - 387001",
+    phoneNumber: "0268 525 3551, 0268 525 3552, 9737455707",
+},
+{
+    sno: 44,
+    hospitalName: "Sanjeevani Multispeciality Hospital",
+    speciality: null,
+    address: "Near D-Mart, Piplod - Dumas Road, Surat - 395007",
+    phoneNumber: "0261 397 8888, 7043408843",
+},
+{
+    sno: 45,
+    hospitalName: "Shalby Hospitals",
+    speciality: null,
+    address: "Opposite Karnavati Club, S G Road, Ahmedabad - 380058",
+    phoneNumber: "079 4020 1000, 4020 1100, 9898434700",
+},
+{
+    sno: 46,
+    hospitalName: "Rajasthan Hospitals",
+    speciality: null,
+    address: "N H No 8, Shahibaug, Ahmedabad - 380004",
+    phoneNumber: "079 2286 0810, 2286 0811, 9879110746",
+},
+{
+    sno: 47,
+    hospitalName: "Narayani Super Speciality Hospital",
+    speciality: null,
+    address: "Siyaganj, Dahod - 389151",
+    phoneNumber: "02673 251 100, 02673 251 101, 8000108050",
+},
+{
+    sno: 48,
+    hospitalName: "Krishna Heart and Super Speciality Institute",
+    speciality: null,
+    address: "Near Civil Hospital, Piplata, Anand - 388001",
+    phoneNumber: "0269 222 2213, 9377777394",
+},
+{
+    sno: 49,
+    hospitalName: "Om Multi Speciality Hospital",
+    speciality: null,
+    address: "Opposite Marketing Yard, Visnagar - 384315",
+    phoneNumber: "02765 225 766, 9687676633",
+},
+{
+    sno: 50,
+    hospitalName: "Shri Krishna Hospital",
+    speciality: null,
+    address: "Near IDAR, Hansol, Ahmedabad - 382475",
+    phoneNumber: "079 2929 7394, 9925232262",
+},
+// Continue adding more hospital entries as needed
+{
+    sno: 51,
+    hospitalName: "Maa Sharda Hospital",
+    speciality: null,
+    address: "Rahul Cinema Road, Modasa - 383315",
+    phoneNumber: "02774 246 666, 9879782424",
+},
+{
+    sno: 52,
+    hospitalName: "Medilink Hospital",
+    speciality: null,
+    address: "Rachana Complex, Highway Road, Unjha - 384170",
+    phoneNumber: "02767 252 226, 9879306670",
+},
+{
+    sno: 53,
+    hospitalName: "Raj Hospital",
+    speciality: null,
+    address: "Vidya Nagar, Waghodia - 391760",
+    phoneNumber: "02668 241 101, 8141177040",
+},
+{
+    sno: 54,
+    hospitalName: "Sardar Patel Hospital",
+    speciality: null,
+    address: "Valiya Chokdi, Bharuch - 392001",
+    phoneNumber: "02642 247 211, 9979750123",
+},
+{
+    sno: 55,
+    hospitalName: "Krishna Hospital",
+    speciality: null,
+    address: "Prashant Kunj Society, Palanpur - Deesa Highway, Siddhpur - 384151",
+    phoneNumber: "02767 222 366, 9409578231",
+},
+{
+    sno: 56,
+    hospitalName: "Nidhi Hospital",
+    speciality: null,
+    address: "Suraj Nagar, Himmatnagar - 383001",
+    phoneNumber: "02772 229 266, 9979916900",
+},
+{
+    sno: 57,
+    hospitalName: "Vallabh Surgical Hospital",
+    speciality: null,
+    address: "Behind H K House, Patan - 384265",
+    phoneNumber: "02766 233 225, 9227885433",
+},
+{
+    sno: 58,
+    hospitalName: "Smt. Sharda Kansara Super Speciality Hospital",
+    speciality: null,
+    address: "Anand - Sojitra Road, Anand - 388120",
+    phoneNumber: "02692 263 107, 8469848393",
+},
+{
+    sno: 59,
+    hospitalName: "Chiranjivi Multispeciality Hospital",
+    speciality: null,
+    address: "Nana Khumbha Road, Gondal - 360311",
+    phoneNumber: "02825 222 147, 9909515010",
+},
+{
+    sno: 60,
+    hospitalName: "Minal Medical Center",
+    speciality: null,
+    address: "Jamnagar Road, Botad - 364710",
+    phoneNumber: "02849 251 266, 9824018008",
+},
+// Continue adding more hospital entries as needed
+{
+    sno: 71,
+    hospitalName: "Siddhi Vinayak Hospital",
+    speciality: null,
+    address: "Opposite Nandurbar Railway Station, Nandurbar - 425412",
+    phoneNumber: "02564 224 733, 7588024481",
+},
+{
+    sno: 72,
+    hospitalName: "Kamalnayan Bajaj Cancer Hospital",
+    speciality: "Cancer",
+    address: "Golden Dyes Compound, Gangapur Road, Aurangabad - 431005",
+    phoneNumber: "0240 660 4400, 9689004383",
+},
+{
+    sno: 73,
+    hospitalName: "Sarthak Maternity and General Hospital",
+    speciality: null,
+    address: "Mahudi Road, Vijapur - 382870",
+    phoneNumber: "02763 294 499, 9824269654",
+},
+{
+    sno: 74,
+    hospitalName: "Sadbhavna General Hospital",
+    speciality: null,
+    address: "Gujarat State Highway 63, Vadodara - 391774",
+    phoneNumber: "02661 240 161, 9913454300",
+},
+{
+    sno: 75,
+    hospitalName: "Parth Hospital",
+    speciality: null,
+    address: "Nana Khumbha Road, Gondal - 360311",
+    phoneNumber: "02825 222 220, 9426224220",
+},
+{
+    sno: 76,
+    hospitalName: "Sheth M.B. Shah Eye and ENT Hospital",
+    speciality: "Eye and ENT",
+    address: "Narsinh Park, Botad - 364710",
+    phoneNumber: "02849 245 349, 9825079714",
+},
+{
+    sno: 77,
+    hospitalName: "Rajeshri Cancer Hospital",
+    speciality: "Cancer",
+    address: "Cancer Hospital Campus, Tilak Road, Dahod - 389151",
+    phoneNumber: "02673 222 200, 9426959214",
+},
+          {
+            sno: 78,
+            hospitalName: "Shivam Multi Speciality Hospital",
+            speciality: null,
+            address: "Jamnagar Road, Botad - 364710",
+            phoneNumber: "02849 230 038, 9574785888",
+          },
+          {
+            sno: 79,
+            hospitalName: "Giriraj Hospital",
+            speciality: null,
+            address: "Nandurbar - Shahada Road, Nandurbar - 425412",
+            phoneNumber: "02564 212 610, 9422260099",
+          },
+          {
+            sno: 80,
+            hospitalName: "Ma Sharda Hospital",
+            speciality: null,
+            address: "N.H. No 8, Bharuch - 392002",
+            phoneNumber: "02642 249 259, 8866712951",
+          },
+          // Continue adding more hospital entries as needed
+        ];
+
+        const searchButton = document.getElementById("searchButton");
+        const tableContainer = document.getElementById("table-container");
+        const searchBar = document.getElementById("searchBar");
+        const tableBody = document.getElementById("tableBody");
+
+        searchButton.addEventListener("click", function () {
+          const searchText = searchBar.value.toLowerCase();
+          tableBody.innerHTML = "";
+
+          for (let i = 0; i < data.length; i++) {
+            const entry = data[i];
+            if (
+              entry.hospitalName.toLowerCase().includes(searchText) ||
+              (entry.speciality &&
+                entry.speciality.toLowerCase().includes(searchText)) || // Check if speciality is not null
+              entry.address.toLowerCase().includes(searchText)
+            ) {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                <td>${entry.sno}</td>
+                <td>${entry.hospitalName}</td>
+                <td>${
+                  entry.speciality || ""
+                }</td> <!-- Handle the case when speciality is null -->
+                <td>${entry.address}</td>
+                <td>${
+                  entry.phoneNumber || ""
+                }</td> <!-- Handle the case when phoneNumber is null -->
+              `;
+              tableBody.appendChild(row);
+            }
+          }
+
+          if (tableBody.children.length > 0) {
+            tableContainer.style.display = "block"; // Display the table container
+          } else {
+            tableContainer.style.display = "none"; // Hide the table container
+          }
+        });
+      </script>
+      <div id="page3">
+        <canvas></canvas>
+      </div>
+      <div id="page4">
+        <h3>HELPING-HAND MEDICAL LABS</h3>
+        <h1>
+          Helping-Hand Medical Labs is a comprehensive laboratory database
+          located in Vadodara, India. It includes attributes such as a unique
+          serial number (SNO) for each entry, lab names for easy identification,
+          and addresses to assist with navigation.
+        </h1>
+      </div>
+
+      <style>
+        #table-container1 {
+          max-height: 90px;
+          overflow-y: scroll;
+          color: white;
+          padding: 1rem 3rem 1rem 3rem;
+          border-radius: 5rem;
+          border: 5px solid #5978f3;
+          font-size: 1.2rem;
+          line-height: 1em;
+          letter-spacing: 0.075em;
+          transition: background 0.3s;
+          cursor: pointer;
+          background: #0f1c53;
+          display: none; /* Initially hide the table container */
+        }
+
+        #searchBarContainer1 {
+          text-align: center;
+          padding: 20px;
+        }
+
+        #searchButtonLabs {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px; /* Adjust the height as needed */
+          position: relative;
+          padding: 0 20px;
+          font-size: 18px;
+          text-transform: uppercase;
+          border: 0;
+          box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+          background-color: hsl(210deg 100% 44%);
+          border-radius: 12px;
+          overflow: hidden;
+          transition: 31ms cubic-bezier(0.5, 0.7, 0.4, 1);
+        }
+
+        #searchButtonLabs:before {
+          content: attr(alt);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          inset: 0;
+          font-size: 15px;
+          font-weight: bold;
+          color: white;
+          letter-spacing: 4px;
+          opacity: 1;
+        }
+
+        #searchButtonLabs:active {
+          box-shadow: none;
+          transform: translateY(7px);
+          transition: 35ms cubic-bezier(0.5, 0.7, 0.4, 1);
+        }
+
+        #searchButtonLabs i {
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 4px;
+          font-style: normal;
+          transition: all 2s ease;
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+
+        #searchBarLabs {
+          font-size: 20px;
+  height: 40px;
+  width: 11cm; /* Set the width to 11 centimeters */
+  background: rgb(51, 9, 205);
+  color: rgb(250, 63, 11);
+  border-radius: 5px;
+  box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke, 0 0 100px white;
+        }
+
+        #searchButtonLabs:hover i {
+          transition: all 0.2s ease;
+          transform: translateY(0px);
+          opacity: 1;
+        }
+
+        #searchButtonLabs:hover i:nth-child(1) {
+          transition-delay: 0.045s;
+        }
+
+        #searchButtonLabs:hover i:nth-child(2) {
+          transition-delay: calc(0.045s * 3);
+        }
+
+        #searchButtonLabs:hover i:nth-child(3) {
+          transition-delay: calc(0.045s * 4);
+        }
+
+        #searchButtonLabs:hover i:nth-child(4) {
+          transition-delay: calc(0.045s * 5);
+        }
+
+        #searchButtonLabs:hover i:nth-child(6) {
+          transition-delay: calc(0.045s * 6);
+        }
+
+        #searchButtonLabs:hover i:nth-child(7) {
+          transition-delay: calc(0.045s * 7);
+        }
+
+        #searchButtonLabs:hover i:nth-child(8) {
+          transition-delay: calc(0.045s * 8);
+        }
+
+        #searchButtonLabs:hover i:nth-child(9) {
+          transition-delay: calc(0.045s * 9);
+        }
+
+        #searchButtonLabs:hover i:nth-child(10) {
+          transition-delay: calc(0.045s * 10);
+        }
+      </style>
+
+      <div id="searchBarContainer1">
+        <input type="text" id="searchBarLabs" placeholder="Search Labs..." />
+        <button id="searchButtonLabs" alt="SEARCH LABS">
+          <i>S</i>
+          <i>E</i>
+          <i>A</i>
+          <i>R</i>
+          <i>C</i>
+          <i>H</i>
+          <i>&nbsp;</i>
+          <i>L</i>
+          <i>A</i>
+          <i>B</i>
+          <i>S</i>
+        </button>
+      </div>
+
+      <div id="table-container1">
+        <table>
+          <thead>
+            <tr>
+              <th>Sno</th>
+              <th>LabName</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody id="tableBodyLabs">
+            <!-- Table rows will be added here using JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <script>
+        const dataLabs = [
+          {
+            Sno: 1,
+            LabName: "Apollo Laboratory",
+            Address:
+              "57, Maikrupa Society, Mental Hospital Road Karelibaug, Vadodara - 390018",
+          },
+          {
+            Sno: 2,
+            LabName: "DR Modi Laboratory",
+            Address:
+              "101, Dax Plaza, Waghodia, Vadodara, Gujarat - 390019, India",
+          },
+          {
+            Sno: 3,
+            LabName: "B M Parikh Foundation Trust Charitable Hospital",
+            Address:
+              "M G Road Main Road, Mandvi, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            Sno: 4,
+            LabName: "Mr Nilesh Bemlekar",
+            Address:
+              "7, Ground Floor, Prabhuda Complex, Manjalpur, Vadodara, Gujarat - 390011, India",
+          },
+          // Continue adding more lab entries as needed
+        ];
+
+        const searchButtonLabs = document.getElementById("searchButtonLabs");
+        const tableContainerLabs = document.getElementById("table-container1");
+        const searchBarLabs = document.getElementById("searchBarLabs");
+        const tableBodyLabs = document.getElementById("tableBodyLabs");
+
+        searchButtonLabs.addEventListener("click", function () {
+          const searchText = searchBarLabs.value.toLowerCase();
+          tableBodyLabs.innerHTML = "";
+
+          for (let i = 0; i < dataLabs.length; i++) {
+            const entry = dataLabs[i];
+            if (
+              entry.LabName.toLowerCase().includes(searchText) ||
+              entry.Address.toLowerCase().includes(searchText)
+            ) {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                <td>${entry.Sno}</td>
+                <td>${entry.LabName}</td>
+                <td>${entry.Address}</td>
+              `;
+              tableBodyLabs.appendChild(row);
+            }
+          }
+
+          if (tableBodyLabs.children.length > 0) {
+            tableContainerLabs.style.display = "block";
+          } else {
+            tableContainerLabs.style.display = "none";
+          }
+        });
+      </script>
+
+      <div id="page5">
+        <canvas></canvas>
+      </div>
+      <div id="page6">
+        <h3>HELPING-HAND BLOOD BANKS</h3>
+        <h1>
+          Helping-Hand Blood Banks is a comprehensive database of blood banks
+          located in Vadodara, India. It includes attributes such as a unique
+          serial number (SNO) for each entry, blood bank names for easy
+          identification, and addresses to assist with navigation.
+        </h1>
+      </div>
+
+      <style>
+        #table-container2 {
+          max-height: 90px;
+          overflow-y: scroll;
+          color: white;
+          padding: 1rem 3rem 1rem 3rem;
+          border-radius: 5rem;
+          border: 5px solid #5978f3;
+          font-size: 1.2rem;
+          line-height: 1em;
+          letter-spacing: 0.075em;
+          transition: background 0.3s;
+          cursor: pointer;
+          background: #0f1c53;
+          display: none; /* Initially hide the table container */
+        }
+
+        #searchBarContainer2 {
+          text-align: center;
+          padding: 20px;
+        }
+
+        #searchButtonBloodBank {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px; /* Adjust the height as needed */
+          position: relative;
+          padding: 0 20px;
+          font-size: 18px;
+          text-transform: uppercase;
+          border: 0;
+          box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+          background-color: hsl(210deg 100% 44%);
+          border-radius: 12px;
+          overflow: hidden;
+          transition: 31ms cubic-bezier(0.5, 0.7, 0.4, 1);
+        }
+
+        #searchButtonBloodBank:before {
+          content: attr(alt);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          inset: 0;
+          font-size: 15px;
+          font-weight: bold;
+          color: white;
+          letter-spacing: 4px;
+          opacity: 1;
+        }
+
+        #searchButtonBloodBank:active {
+          box-shadow: none;
+          transform: translateY(7px);
+          transition: 35ms cubic-bezier(0.5, 0.7, 0.4, 1);
+        }
+
+        #searchButtonBloodBank i {
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 4px;
+          font-style: normal;
+          transition: all 2s ease;
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+
+        #searchBarBloodBank {
+          font-size: 20px;
+  height: 40px;
+  width: 11cm; /* Set the width to 11 centimeters */
+  background: rgb(51, 9, 205);
+  color: rgb(250, 63, 11);
+  border-radius: 5px;
+  box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke, 0 0 100px white;
+        }
+
+        #searchButtonBloodBank:hover i {
+          transition: all 0.2s ease;
+          transform: translateY(0px);
+          opacity: 1;
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(1) {
+          transition-delay: 0.045s;
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(2) {
+          transition-delay: calc(0.045s * 3);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(3) {
+          transition-delay: calc(0.045s * 4);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(4) {
+          transition-delay: calc(0.045s * 5);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(6) {
+          transition-delay: calc(0.045s * 6);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(7) {
+          transition-delay: calc(0.045s * 7);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(8) {
+          transition-delay: calc(0.045s * 8);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(9) {
+          transition-delay: calc(0.045s * 9);
+        }
+
+        #searchButtonBloodBank:hover i:nth-child(10) {
+          transition-delay: calc(0.045s * 10);
+        }
+      </style>
+
+      <div id="searchBarContainer2">
+        <input
+          type="text"
+          id="searchBarBloodBank"
+          placeholder="Search Blood Banks..."
+        />
+        <button id="searchButtonBloodBank" alt="BLOOD BANK">
+          <i>B</i>
+          <i>L</i>
+          <i>O</i>
+          <i>O</i>
+          <i>D</i>
+          <i>&nbsp;</i>
+          <i>B</i>
+          <i>A</i>
+          <i>N</i>
+          <i>K</i>
+        </button>
+      </div>
+
+      <div id="table-container2">
+        <table>
+          <thead>
+            <tr>
+              <th>Sno</th>
+              <th>BLOOD BANKS</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody id="tableBodyBloodBank">
+            <!-- Table rows will be added here using JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <script>
+        const dataBloodBank = [
+          {
+            sno: 1,
+            bloodBank: "S. S. G. Hospital Blood Bank",
+            address:
+              "The Government Medical College And S.S.G. Hospital, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            sno: 2,
+            bloodBank: "Jamnabai Blood Bank",
+            address:
+              "Jamnabai General Hospital, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            sno: 3,
+            bloodBank: "Shri Jalaram Blood Bank",
+            address:
+              "Medical Care Centre Trust, Shri Jalaram Blood Bank, Karelibaug, Vadodara, Gujarat - 390018, India",
+          },
+          {
+            sno: 4,
+            bloodBank: "Suraktam Blood Bank",
+            address:
+              "G-7, Blue Chip Building, Near Stock Exchange, Sayajiganj, Vadodara, Gujarat - 390005, India",
+          },
+          {
+            sno: 5,
+            bloodBank: "Kailash Cancer Hospital & Research Centre Blood Bank",
+            address:
+              "At: Muni Seva Ashram, Po: Goraj, Tal: Waghodiya, Dist: Vadodara, Gujarat - 391760, India",
+          },
+          {
+            sno: 6,
+            bloodBank: "GMERS Medical College And General Hospital Blood Bank",
+            address:
+              "GMERS General Hospital And Medical College, Gotri, Vadodara, Gujarat - 390021, India",
+          },
+          {
+            sno: 7,
+            bloodBank: "Indu Blood Bank Vadodara",
+            address:
+              "III Floor, Vinraj Plaza, Opposite To Government Press, Khoti, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            sno: 8,
+            bloodBank: "Dhiraj General Blood Bank Vadodara",
+            address:
+              "Mu. Post:-Waghodiya, Pipariya, Vadodara, Gujarat - 391760, India",
+          },
+          {
+            sno: 9,
+            bloodBank: "Bhailal Amin General Hospital Blood Bank",
+            address:
+              "Bhailal Amin General Hospital Blood Bank, Alembic Road, Vadodara, Gujarat - 391760, India",
+          },
+          {
+            sno: 10,
+            bloodBank: "Indu Voluntary Blood Bank",
+            address:
+              "Vinraj Plaza, 3rd Floor, Main Road, Kothi, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            sno: 11,
+            bloodBank: "Suraktam Blood Bank",
+            address:
+              "Blue Chip Complex, Main Road, Sayaji Ganj, Vadodara, Gujarat - 390020, India",
+          },
+          {
+            sno: 12,
+            bloodBank: "Suraktam Blood Bank",
+            address:
+              "Blue Chip Building, Rajshree Theater Lane, Kalaghoda, Sayajiganj, Vadodara, Gujarat - 390020, India",
+          },
+          {
+            sno: 13,
+            bloodBank: "Kailash Cancer Hospital, Blood Bank",
+            address:
+              "Goraj Village, Vadodara HO, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            sno: 14,
+            bloodBank: "Citizen Blood Bank",
+            address:
+              "Ssg Hospital, Main Road, Rajmahal Road, Vadodara, Gujarat - 390001, India",
+          },
+          {
+            sno: 15,
+            bloodBank: "Kashiben Gordhandas Patel Childrens Hospital",
+            address:
+              "Jalaram Temple Road Main Road, Karelibaug, Vadodara, Gujarat - 390018, India",
+          },
+          {
+            sno: 16,
+            bloodBank: "Dr Monali Desai",
+            address: "35, Alkapuri, Vadodara, Gujarat - 390007, India",
+          },
+          // Continue adding more blood bank entries as needed
+        ];
+
+        const searchButtonBloodBank = document.getElementById(
+          "searchButtonBloodBank"
+        );
+        const searchBarBloodBank =
+          document.getElementById("searchBarBloodBank");
+        const tableBodyBloodBank =
+          document.getElementById("tableBodyBloodBank");
+        const tableContainer2 = document.getElementById("table-container2");
+
+        searchButtonBloodBank.addEventListener("click", () => {
+          const searchValue = searchBarBloodBank.value.toLowerCase();
+
+          const filteredBloodBanks = dataBloodBank.filter((entry) =>
+            entry.bloodBank.toLowerCase().includes(searchValue)
+          );
+
+          displayBloodBankResults(filteredBloodBanks);
+        });
+
+        function displayBloodBankResults(results) {
+          tableBodyBloodBank.innerHTML = ""; // Clear previous results
+
+          if (results.length > 0) {
+            results.forEach((entry) => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                <td>${entry.sno}</td>
+                <td>${entry.bloodBank}</td>
+                <td>${entry.address}</td>
+              `;
+              tableBodyBloodBank.appendChild(row);
+            });
+
+            tableContainer2.style.display = "block"; // Show the table container
+          } else {
+            tableContainer2.style.display = "none"; // Hide the table container
+          }
+        }
+      </script>
+
+      <div id="page7">
+        <div class="page7-cir">
+          <div class="page7-cir-inner"></div>
+        </div>
+        <canvas></canvas>
+      </div>
+       <div id="page8">
+        <div class="page8-bottom">
+          <h1>Blood-Bank</h1>
+          <button>LEARN MORE</button>
+        </div>
+        <div class="video-container">
+          <video src="bloodbank.mp4" autoplay loop muted></video>
+        </div>
+      </div>
+
+      <div id="page9">
+        <div class="left9">
+          <h1>
+            What is <br />
+            HELPING HAND?
+          </h1>
+        </div>
+        <div class="right9">
+          <div class="right9-center"></div>
+        </div>
+      </div>
+      <div id="page10">
+        <div class="right10">
+          <div class="right10-inner">
+            <h1>HELPING HAND</h1>
+            <p>
+              "Helping Hand" is a groundbreaking online platform dedicated to
+              revolutionizing healthcare accessibility. We have meticulously
+              compiled a comprehensive database of essential medical services,
+              including hospitals, labs, blood banks, ambulance services, and
+              pharmacies. Our platform serves as a one-stop destination for
+              individuals seeking critical healthcare information.
+            </p>
+          </div>
+          <div class="right10-inner">
+            <h1>Key Features:</h1>
+            <p>
+              A comprehensive healthcare database for hospitals, labs, blood
+              banks, ambulance services, and pharmacies. <br />Detailed facility
+              profiles for informed decision-making.<br />
+              An intuitive, user-friendly interface.<br />
+              Real-time emergency ambulance information.<br />
+              Community reviews for transparency and informed choices.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="page11">
+        <h1>Recent Blog</h1>
+        <div class="page11-inner">
+          <div class="left11">
+            <img src="medical.webp" />
+          </div>
+          <div class="right11">
+            <h4>MEDICAL STORES</h4>
+            <h1>
+              A medical store, also known as a pharmacy or drugstore, offers<br />
+              prescription and non-prescription medications, medical
+              supplies,<br />
+              and healthcare products to the public.<br />
+            </h1>
+          </div>
+        </div>
+        <div class="page11-inner">
+          <div class="left11">
+            <img src="labs.jpg" />
+          </div>
+          <div class="right11">
+            <h4>LABORATORY</h4>
+            <h1>
+              Medical labs are facilities where diagnostic tests and analyses<br />
+              are conducted on patient samples to assist in medical diagnoses<br />
+              and monitoring of health conditions.<br />
+            </h1>
+          </div>
+        </div>
+        <div class="page11-inner">
+          <div class="left11">
+            <img src="blood.jpg" />
+          </div>
+          <div class="right11">
+            <h4>BLOOD BANK</h4>
+            <h1>
+              A blood bank is a facility that collects, stores, and
+              distributes<br />
+              blood and blood products for medical purposes, such as<br />
+              transfusions and treatments.<br />
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div id="page12">
+        <header>
+          <h1>Contact the Developer</h1>
+      </header>
+        <div class="page12-inner">
+          <style>
+               header {
+            text-align: center; /* Center-align the header text horizontally */
+            padding: 20px 0; /* Add some top and bottom padding for spacing */
+            background-color: linear-gradient(rgb(233, 161, 7), rgb(51, 9, 205)); /* Add background color to the header */
+            color: #fff; /* Set text color to white */
+        }
+
+        header h1 {
+            margin: 0; /* Remove default margin */
+        }
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+    
+            body {
+                background: linear-gradient(rgb(233, 161, 7), rgb(51, 9, 205));
+            }
+    
+            .contact-right {
+    width: 800px;
+    padding: 70px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px whitesmoke;
+    border-radius: 10px;
+    background: linear-gradient(rgb(51, 9, 205), rgb(250, 63, 11));
+    color: #fff;
+    margin: 0 auto; /* This will center the form horizontally */
+}
+
+/* Rest of your CSS for .contact-right remains the same */
+
+    
+            .contact-right h2 {
+                margin: 0 0 20px;
+                font-size: 24px;
+                padding: 0;
+                text-align: center;
+            }
+    
+            .contact-right .user-box {
+                position: relative;
+            }
+    
+            .contact-right input,
+            .contact-right textarea {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                background: transparent;
+            }
+    
+            .contact-right label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 10px 0;
+                font-size: 16px;
+                pointer-events: none;
+                transition: 0.5s;
+            }
+    
+            .contact-right input:focus ~ label,
+            .contact-right input:valid ~ label {
+                top: -20px;
+                left: 0;
+                font-size: 12px;
+            }
+    
+            .contact-right .btn2 {
+                display: inline-block;
+                padding: 10px 20px;
+                color: rgb(250, 63, 11);
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                overflow: hidden;
+                transition: 0.5s;
+                margin-top: 40px;
+                letter-spacing: 4px;
+                background: transparent;
+                border: 2px solid rgb(250, 63, 11);
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            .contact-right .btn2:hover {
+                background: rgb(51, 9, 205);
+                color: rgb(250, 63, 11);
+                border-radius: 5px;
+                box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke,
+                    0 0 100px white;
+            }
+    
+            .contact-right .btn2 span {
+                position: absolute;
+                display: block;
+            }
+    
+            .contact-right .btn2 span:nth-child(1) {
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, white);
+                animation: btn-anim1 1s linear infinite;
+                animation-delay: 0.2s;
+            }
+    
+            @keyframes btn-anim1 {
+                0% {
+                    left: -100%;
+                }
+                50%,
+                100% {
+                    left: 80%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contact-right">
+            <h2>Contact Us</h2>
+            <form name="submit-to-google-sheet">
+                <div class="user-box">
+                    <input type="text" id="name" name="Name" required />
+                    <label for="name">Your Name</label>
+                </div>
+    
+                <div class="user-box">
+                    <input type="email" id="email" name="email" required />
+                    <label for="email">Your Email</label>
+                </div>
+    
+                <div class="user-box">
+                    <textarea id="message" name="Message" rows="6"></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+    
+                <button type="submit" class="btn2"><span></span>Submit</button>
+            </form>
+            <span id="mesg"></span>
+        </div>
+    
+        <!-- Add your JavaScript code for Google Sheets integration here -->
+        <script>
+            const form = document.forms["submit-to-google-sheet"];
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+    
+                const formData = new FormData(form);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+    
+                console.log("Form data:", data);
+    
+                // Reset the form or display a success message as needed
+                form.reset();
+            });
+        </script>
+          
+        </div>
+        <div class="left12-inner">
+          <style>
+              html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background: linear-gradient(rgb(233, 161, 7), rgb(51, 9, 205));
+    }
+
+    .login-box,
+    .register-box {
+      position: absolute;
+      top: 50%;
+      left: 0; /* Align to the left side of the page */
+      width: 400px; /* Adjust as needed */
+      padding: 40px;
+      transform: translateY(-50%);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px whitesmoke;
+      border-radius: 10px;
+      background: linear-gradient(rgb(51, 9, 205), rgb(250, 63, 11));
+      color: #fff;
+    }
+
+    .login-box h2,
+    .register-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      text-align: center;
+    }
+
+    .login-box .user-box,
+    .register-box .user-box {
+      position: relative;
+    }
+
+    .login-box .user-box input,
+    .register-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+
+    .login-box .user-box label,
+    .register-box .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label,
+    .register-box .user-box input:focus ~ label,
+    .register-box .user-box input:valid ~ label {
+      top: -20px;
+      left: 0;
+      font-size: 12px;
+    }
+
+    .login-box form a,
+    .register-box .register-button,
+    .back-to-login-button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: rgb(250, 63, 11);
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+      margin-top: 40px;
+      letter-spacing: 4px;
+    }
+
+    .login-box a:hover,
+    .register-box .register-button:hover,
+    .back-to-login-button:hover {
+      background: rgb(51, 9, 205);
+      color: rgb(250, 63, 11);
+      border-radius: 5px;
+      box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke,
+        0 0 100px white;
+    }
+
+    .login-box a span,
+    .register-box .register-button span,
+    .back-to-login-button span {
+      position: absolute;
+      display: block;
+    }
+
+    .login-box a span:nth-child(1),
+    .register-box .register-button span:nth-child(1),
+    .back-to-login-button span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, white);
+      animation: btn-anim1 1s linear infinite;
+      animation-delay: 0.2s;
+    }
+
+    /* Add additional animation styles as needed */
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+      50%,
+      100% {
+        left: 80%;
+      }
+    }
+
+    /* Styles for the registration form */
+    .register-box {
+      background: linear-gradient(rgb(51, 9, 205), rgb(250, 63, 11));
+    }
+
+    .registration-form {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box" id="signin-form">
+    <h2>Sign In Form</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="" />
+        <label>User ID</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" />
+        <label>Password</label>
+      </div>
+      <a href="#" class="back-to-login-button" id="back-to-login">
+        Back to Login
+      </a>
+      <a href="#" class="register-button" id="show-registration">
+        Register
+      </a>
+    </form>
+  </div>
+
+  <div class="register-box registration-form" id="registration-form">
+    <h2>Registration Form</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="" />
+        <label>Full Name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="" />
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" />
+        <label>Password</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" />
+        <label>Confirm Password</label>
+      </div>
+      <button type="button" class="back-to-login-button" id="back-to-login">
+        Back to Login
+      </button>
+      <a href="#" class="register-button">
+        Register
+      </a>
+    </form>
+  </div>
+
+  <script>
+    const signinForm = document.getElementById("signin-form");
+    const registrationForm = document.getElementById("registration-form");
+    const showRegistrationBtn = document.getElementById("show-registration");
+    const backToLoginBtns = document.querySelectorAll(
+      ".back-to-login-button"
+    );
+
+    showRegistrationBtn.addEventListener("click", () => {
+      signinForm.style.display = "none";
+      registrationForm.style.display = "block";
+    });
+
+    backToLoginBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        registrationForm.style.display = "none";
+        signinForm.style.display = "block";
+      });
+    });
+  </script>
+        </div>
+      </div>
+      <div id="page13">
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+          }
+    
+          header {
+            background: linear-gradient(rgb(51, 9, 205), rgb(250, 63, 11));
+            color: #fff;
+            transition: background 0.3s, color 0.3s, border-radius 0.3s,
+              box-shadow 0.3s;
+           
+            text-align: center;
+            padding: 20px;
+          }
+    
+          h1 {
+            margin: 0;
+          }
+    
+          .container {
+            width: 80%; /* Set the container width to 80% */
+            max-width: 800px; /* Set a maximum width to ensure it's not too wide */
+            margin: 0 auto; /* Center the container with equal margins on both sides */
+            height: 80vh; /* Make the container full height of the viewport */
+            padding: 120px;
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px whitesmoke;
+            border-radius: 10px;
+            background: linear-gradient(rgb(51, 9, 205), rgb(250, 63, 11));
+            color: #fff;
+            transition: background 0.3s, color 0.3s, border-radius 0.3s,
+              box-shadow 0.3s;
+          }
+    
+          .container:hover {
+            background: rgb(51, 9, 205);
+            color: rgb(250, 63, 11);
+            border-radius: 5px;
+            box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke,
+              0 0 100px white;
+          }
+    
+          h2 {
+            color: #d9534f;
+          }
+    
+          label {
+            font-weight: bold;
+          }
+    
+          input[type="text"],
+          select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+          }
+    
+          button {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <h1>Blood Bank</h1>
+          <p>Donate blood, save lives</p>
+        </header>
+        <div class="container">
+          <h2>Find a Blood Bank Near You</h2>
+          <form id="bloodBankForm">
+            <label for="bloodType">Blood Type:</label>
+            <select id="bloodType" name="bloodType">
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+            <label for="location">Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter your city or ZIP code"
+            />
+            <button type="submit">Search</button>
+          </form>
+          <div id="results"></div>
+        </div>
+    
+        <script>
+          // JavaScript to handle the form submission and display results
+          const bloodBankForm = document.getElementById("bloodBankForm");
+          const resultsDiv = document.getElementById("results");
+    
+          bloodBankForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const bloodType = document.getElementById("bloodType").value;
+            const location = document.getElementById("location").value;
+            // You can perform a backend API call to retrieve blood bank information
+            // and display it here in the 'results' div.
+            // For simplicity, we will just display a message.
+            resultsDiv.innerHTML = `Blood banks near ${location} with blood type ${bloodType} will be displayed here.`;
+          });
+        </script>
+      <div id="page14">
+        <div class="page14-inner">
+          <h1>Twitter</h1>
+          <i class="ri-arrow-right-up-line"></i>
+          <div class="center14"></div>
+        </div>
+        <div class="page14-inner">
+          <h1>LinkedIn</h1>
+          <i class="ri-arrow-right-up-line"></i>
+          <div class="center14"></div>
+        </div>
+        <div class="page14-inner">
+          <h1>Instagram</h1>
+          <i class="ri-arrow-right-up-line"></i>
+          <div class="center14"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
